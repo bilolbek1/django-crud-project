@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body{
+        background-color: #053B50;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3vw;
+
+    }
+    input{
+        width: 100%;
+        height: 2.2vw;
+        border: none;
+        outline: none;
+        padding-left: 0.8vw;
+        font-size: 1.3vw;
+        color: #FC4F4F;
+        border-radius: 5px;
+    }
+    label{
+        font-size: 1.5vw;
+        color: #313866;
+        font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    }
+    form{
+        width: 40vw;
+        height: 35vw;
+        background-color: teal;
+        margin: 0;
+        padding: 1.1vw;
+        border-radius: 20px;
+    }
+    button{
+        width: 12vw;
+        height: 4vw;
+        margin-left: 15vw;
+        margin-top: 1vw;
+        background-color: #6528F7;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        font-size: 1.4vw;
+        cursor: pointer;
+    }
+    button:hover{
+        color: #6528F7;
+        background-color: white;
+        transition: 0.4s ease-in-out;
+    }
+</style>
+<body>
+
+<form method="post">
+    {% csrf_token %}
+    {{ people.as_p }}
+
+    <button type="submit">submit</button>
+</form>
+
+</body>
+</html>
