@@ -6,7 +6,7 @@ class People(models.Model):
     name = models.CharField(max_length=32)
     surname = models.CharField(max_length=32)
     city = models.CharField(max_length=54)
-    b_date = models.DateField()
+    age = models.IntegerField()
     job = models.CharField(max_length=32)
 
     def __str__(self):
