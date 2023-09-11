@@ -96,7 +96,7 @@
 
 
 
-<div id="container" style="width: 85vw; margin-top: 3vw">
+<div id="container" style="width: 90vw; margin-top: 3vw">
     <canvas id="pieChart"></canvas>
 </div>
 
@@ -125,11 +125,11 @@
         ],
         backgroundColor: [
           'rgba(255, 99, 132, 0.8)',
-          'rgba(54, 162, 235, 0.8)',
-          'rgba(255, 206, 86, 0.8)',
-          'rgba(75, 192, 192, 0.8)',
-          'rgba(153, 102, 255, 0.8)',
-          'rgba(255, 159, 64, 0.8)',
+          'rgb(101,104,238)',
+          'rgb(177,108,255)',
+          'rgba(6,231,231,0.8)',
+          'rgba(110,54,230,0.8)',
+          'rgba(0,255,4,0.8)',
           'rgba(237,255,0,0.8)'
         ]
       }]
@@ -146,33 +146,5 @@
     });
   </script>
 
-{#<script>#}
-{#    const config = {#}
-{#  type: 'pie',#}
-{#  data: {#}
-{#      datasets: [{#}
-{#          data: {{ date|safe }},#}
-{#          backgroundColor: [#}
-{#              '#9400FF', '#EA1179', '#1B9C85',#}
-{#              'yellow', '#F86F03', '#27005D',#}
-{#          ],#}
-{#          label: 'Label'#}
-{#      }],#}
-{#      label: {{ name|safe }}#}
-{#    },#}
-{#  options: {#}
-{#    responsive: true,#}
-{#    plugins: {#}
-{#      legend: {#}
-{#        position: 'top',#}
-{#      },#}
-{#      title: {#}
-{#        display: true,#}
-{#        text: 'Chart.js Pie Chart'#}
-{#      }#}
-{#    }#}
-{#  },#}
-{#};#}
-{#</script>#}
 </body>
 </html>
