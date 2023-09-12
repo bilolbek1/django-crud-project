@@ -13,23 +13,15 @@ class BaseView(View):
     def get(self, request):
         people = People.objects.all()
         search = request.GET.get('q', '')
-        name = []
-        age = []
         queryset = People.objects.all().order_by('-id')[:7]
-        for i in queryset:
-            name.append(i.name)
-            age.append(i.age)
-
 
         if search:
             people = people.filter(
-                Q(job__icontains=search)
+                Q(job__icontains=search) | Q(name__icontains=search)
             )
 
         context = {
             'people': people,
-            'name': name,
-            "date": age,
             'query': queryset
         }
         return render(request, 'base.html', context)
