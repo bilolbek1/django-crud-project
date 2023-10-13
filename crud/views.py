@@ -83,7 +83,7 @@ class PeopleEditView(View):
 
 
 class PeopleDeleteView(View):
-    def get(self,request, id):
+    def get(self, request, id):
         people = People.objects.get(id=id)
         people.delete()
         return redirect(reverse('base'))
