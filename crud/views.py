@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.db.models import Q
 from django.shortcuts import render, redirect
 from django.urls import reverse
@@ -15,12 +16,20 @@ class BaseView(View):
         search = request.GET.get('q', '')
         queryset = People.objects.all().order_by('-id')[:7]
 
+
         if search:
             people = people.filter(
                 Q(job__icontains=search) | Q(name__icontains=search)
             )
+        count = people.count()
+        all = People.objects.all()
+
+
+
 
         context = {
+            'all': all,
+            'count': count,
             'people': people,
             'query': queryset
         }

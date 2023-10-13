@@ -48,6 +48,12 @@
     .search{
         margin-bottom: 1vw;
     }
+    .result{
+        text-align: center;
+        font-size:2vw;
+        color: wheat;
+        margin: 2vw;
+    }
 
 </style>
 <body>
@@ -64,6 +70,11 @@
         <button class="btn btn-success" type="submit">Search</button>
       </form>
 
+    {% if count >= 1%}
+
+        <h1 class="result"><i>Results:</i> {{ count }}</h1>
+
+    {% endif %}
 
     <table class="table">
       <thead>
