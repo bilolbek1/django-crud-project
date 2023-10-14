@@ -22,13 +22,11 @@ class BaseView(View):
                 Q(job__icontains=search) | Q(name__icontains=search)
             )
         count = people.count()
-        all = People.objects.all()
 
 
 
 
         context = {
-            'all': all,
             'count': count,
             'people': people,
             'query': queryset
